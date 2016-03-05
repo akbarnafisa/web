@@ -2,8 +2,80 @@
 <html>
 <head>
 	<title>NA</title>
+	<link rel="stylesheet" type="text/css" href="src/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="src/css/main.css" />
 </head>
 <body>
-	<h1>WOOOOOOOOOteasdaasdOOY</h1>
+	<!-- navigasinya -->
+	<ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+	</ul>
+
+	<!-- main page -->
+	<div id="fullpage">
+		<!-- slide 1 -->
+		<div class="section" id="section0">
+		    <div class="slide" id="slide1" data-anchor="slide1">
+				<div class="intro">
+					<h1>Clickable</h1>
+					<p>
+						You can even click on the navigation and jump directly to another section.
+					</p>
+				</div>
+			</div>
+
+		    <div class="slide" id="slide2" data-anchor="slide2">
+				<h1>Slide 2</h1>
+			</div>
+
+			<div class="slide" id="slide3" data-anchor="slide3">
+				<h1>Slide 3</h1>
+			</div>	<div class="slide" id="slide3" data-anchor="slide3">
+				<h1>Slide 4</h1>
+			</div>
+			<div class="slide" id="slide3" data-anchor="slide3">
+				<h1>Slide 5</h1>
+			</div>
+		</div>
+		<!-- slide 2 -->
+		<div class="section " id="section1">
+			<h1>fullPage.js</h1>
+			<p>Create Beautiful Fullscreen Scrolling Websites</p>
+		</div>
+		<!-- slide 3 -->
+		<div class="section" id="section2">
+			<div class="intro">
+				<h1>Example</h1>
+				<p>HTML markup example to define 4 sections.</p>
+			</div>
+		</div>
+		<!-- slide 4 -->
+		<div class="section" id="section3">
+			<div class="intro">
+				<h1>Working On Tablets</h1>
+				<p>
+					Designed to fit to different screen sizes as well as tablet and mobile devices.
+					<br /><br /><br /><br /><br /><br />
+				</p>
+			</div>
+		
+		</div>
+	</div>
 </body>
+	<script src="src/js/jquery-2.2.1.min.js"></script>
+	<script src="src/js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+					anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+					slidesNavigation: true,
+					scrollingSpeed: 1000
+				});
+				
+			});
+		</script>
 </html>
